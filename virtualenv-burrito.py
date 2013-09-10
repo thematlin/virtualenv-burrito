@@ -68,7 +68,7 @@ def download(url, digest):
 
     print ("\nThe file %s didn't look like we expected.\n"
            "It may have been moved or tampered with. You should tell me:"
-           " @brainsik." % name)
+           " @brainsik. filehash: %s - versionhash: %s" % (name, filehash.hexdigest, digest))
     try:
         os.remove(filename)
     except OSError:
